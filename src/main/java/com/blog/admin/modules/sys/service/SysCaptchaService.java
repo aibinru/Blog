@@ -19,9 +19,9 @@ public interface SysCaptchaService extends IService<SysCaptchaEntity> {
 
     /**
      * 验证码校验
-     * @param uuid
+     * @param
      * @param code 验证码
      * @return TRUE 成功      FALSE 失败
      */
-    boolean validate(String uuid, String code);
+    boolean validate( String code);
 }

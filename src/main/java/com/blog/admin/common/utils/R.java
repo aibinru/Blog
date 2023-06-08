@@ -14,7 +14,7 @@ public class R extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;
 
     public R() {
-        put("code", 0);
+        put("code", 200);
         put("msg", "success");
     }
 
@@ -38,6 +38,23 @@ public class R extends HashMap<String, Object> {
         r.put("msg", msg);
         return r;
     }
+
+    public static R ok(String msg, int code) {
+        R r = new R();
+        r.put("msg", msg);
+        r.put("code", code);
+        return r;
+    }
+
+    public static R ok(String msg, int code,String data) {
+        R r = new R();
+        r.put("msg", msg);
+        r.put("code", code);
+        r.put("data", data);
+        return r;
+    }
+
+
 
     public static R ok(Map<String, Object> map) {
         R r = new R();

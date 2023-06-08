@@ -15,11 +15,11 @@ import java.util.Date;
 @Data
 @TableName("sys_captcha")
 public class SysCaptchaEntity {
-    @TableId(type = IdType.INPUT)
     private String uuid;
     /**
      * 验证码
      */
+    @TableId(type = IdType.INPUT)
     private String code;
 
     /**

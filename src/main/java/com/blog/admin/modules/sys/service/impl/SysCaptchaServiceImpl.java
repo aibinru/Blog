@@ -40,14 +40,15 @@ public class SysCaptchaServiceImpl extends ServiceImpl<SysCaptchaDao, SysCaptcha
         return producer.createImage(code);
     }
 
+
     @Override
-    public boolean validate(String uuid, String code) {
-        SysCaptchaEntity captchaEntity = this.getOne(new QueryWrapper<SysCaptchaEntity>().eq("uuid",uuid));
+    public boolean validate( String code) {
+        SysCaptchaEntity captchaEntity = this.getOne(new QueryWrapper<SysCaptchaEntity>().eq("code",code));
         if (captchaEntity == null) {
             return false;
         }
         //删除验证码
-        this.removeById(uuid);
+        this.removeById(code);
 
         if (captchaEntity.getCode().equalsIgnoreCase(code) && captchaEntity.getExpireTime().getTime() >= System.currentTimeMillis()) {
             return true;
