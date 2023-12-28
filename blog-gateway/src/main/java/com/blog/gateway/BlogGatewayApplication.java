@@ -1,4 +1,4 @@
-package com.blog;
+package com.blog.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class BlogAdminApplication {
+public class BlogGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BlogAdminApplication.class, args);
+        SpringApplication.run(BlogGatewayApplication.class, args);
     }
 
 }
