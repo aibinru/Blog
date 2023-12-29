@@ -28,10 +28,10 @@ public class SysLoginController {
 
     @Autowired
     private SysCaptchaService sysCaptchaService;
-    //@Autowired
-    //private SysUserService sysUserService;
-    //@Autowired
-    //private SysUserTokenService sysUserTokenService;
+//    @Autowired
+//    private SysUserService sysUserService;
+    @Autowired
+    private SysUserTokenService sysUserTokenService;
 
     /**
      * 验证码

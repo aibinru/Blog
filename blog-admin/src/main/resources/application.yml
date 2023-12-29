@@ -3,10 +3,11 @@ server:
 
 spring:
   datasource:
-    #type: com.alibaba.druid.pool.DruidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
     username: root
-    password: abr123
-    url: jdbc:mysql://localhost:3306/blog_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    password: ywy123abr
+    url: jdbc:mysql://139.224.248.106:3306/blog_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    url: jdbc:mysql://localhost:3306/blog_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
 
 mybatis-plus:
   global-config:

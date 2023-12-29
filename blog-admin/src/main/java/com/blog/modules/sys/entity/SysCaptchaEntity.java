@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Date;
  **/
 @Data
 @TableName("sys_captcha")
-public class SysCaptchaEntity {
+public class SysCaptchaEntity implements Serializable {
     private String uuid;
     /**
      * 验证码
